@@ -22,11 +22,16 @@ function setup(){
 function draw(){
 
     // add condition to check if any background image is there to add
+     if(backgroundImg){
+          background=(backgroundImg) 
+     }
+
 
 
     Engine.update(engine);
 
     // write code to display time in correct format here
+     
 
 
 }
@@ -42,19 +47,19 @@ async function getBackgroundImg(){
     if(hour>=0400 && hour<=0600){
         bg = "sunrise1.png";
     }
-    else if(hour>=0600 && hour<=0800){
+    else if(hour>=06 && hour<=08){
         bg = "sunrise2.png";
-    }else if(hour>=0400 && hour<=0600){
+    }else if(hour>=04 && hour<=06){
         bg = "sunrise10.png";
-    }else if(hour==0 && hour<=0300){
+    }else if(hour==0 && hour<=03){
         bg = "sunrise11.png"
     }else{
-       // bg = "sunrise12.png"
+        bg = "sunrise12.png"
     }
 
     backgroundImg = loadImage(bg);
     console.log(backgroundImg);
-
+    text(hour,1000,50)
     //change the data in JSON format
 
     // write code slice the datetime
