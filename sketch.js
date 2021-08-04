@@ -23,7 +23,7 @@ function draw(){
 
     // add condition to check if any background image is there to add
      if(backgroundImg){
-          background=(backgroundImg) 
+          background(backgroundImg) 
      }
 
 
