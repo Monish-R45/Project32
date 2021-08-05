@@ -38,7 +38,7 @@ function draw(){
 
 async function getBackgroundImg(){
 
-    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
+    var response = await fetch("http://worldclockapi.com/api/json/est/now");
     var responseJSON = await response.json();
 
     var datetime = responseJSON.datetime;
@@ -50,11 +50,11 @@ async function getBackgroundImg(){
     else if(hour>=06 && hour<=08){
         bg = "sunrise2.png";
     }else if(hour>=04 && hour<=06){
-        bg = "sunrise10.png";
+        bg = "sunset10.png";
     }else if(hour==0 && hour<=03){
-        bg = "sunrise11.png"
+        bg = "sunset11.png"
     }else{
-        bg = "sunrise12.png"
+        bg = "sunset12.png"
     }
 
     backgroundImg = loadImage(bg);
